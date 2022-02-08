@@ -1,0 +1,13 @@
+.body-container {
+  padding: 20px;
+}
+
+
+a {
+  color: white;
+  border-bottom: rgb(150 164 184) 0.125em solid;
+}
+
+a:visited { 
+  text-decoration: none;
+}
