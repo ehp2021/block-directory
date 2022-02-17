@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# my personal notes
+TO-DO.md
+
 # testing
 /coverage
 

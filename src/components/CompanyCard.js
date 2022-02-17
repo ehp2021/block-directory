@@ -1,18 +1,13 @@
 import React from "react";
 import './CompanyCard.css';
 import {
-    Table,
-    Thead,
-    Tbody,
-    Tfoot,
     Tr,
-    Th,
     Td,
-    TableCaption,
+    Button
   } from '@chakra-ui/react';
 
  function CompanyCard(props) { 
-    const { id,type, name, website, cmc_link, description, technology, white_paper, country} = props.company;
+    const { type, name, website, cmc_link, description, technology, white_paper, country} = props.company;
 
   return (
 
@@ -20,10 +15,10 @@ import {
       <Td>{name}</Td>
       <Td>{type}</Td>
       <Td>{description}</Td>
-      <Td>{technology}</Td>
-      <Td><a href={cmc_link}>{cmc_link === "N/A" ? "N/A" : "link"}</a></Td>
-      <Td><a href={white_paper}>link</a></Td>
-      <Td><a href={website}>link</a> </Td>
+      <Td>{technology === "N/A" ? "N/A" : <a href={technology}><Button size='xs'>github</Button></a>}</Td>
+      <Td>{cmc_link === "N/A" ? "N/A" : <a href={cmc_link}><Button size='xs'>coinmarketcap</Button></a>}</Td>
+      <Td>{white_paper === "N/A" ? "N/A" :<a href={white_paper}><Button size='xs' >white paper</Button></a>}</Td>
+      <Td>{website === "N/A" ? "N/A" : <a href={website}><Button size='xs' >website</Button></a>} </Td>
       <Td>{country}</Td>
     </Tr>
 
